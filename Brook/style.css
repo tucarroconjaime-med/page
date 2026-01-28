@@ -1,0 +1,229 @@
+/* VARIABLES DE COLOR */
+:root {
+    --color-naranja: #FF8C00;
+    --color-aguamarina: #00FBDE;
+    --color-blanco: #ffffff;
+    --color-negro: #1a1a1a;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: var(--color-blanco);
+    /* FONDO DE BOSQUEJOS TÉCNICOS AUTOMOTRICES */
+    /* Usamos una imagen de internet de bosquejos de ingeniería y la teñimos de aguamarina */
+    background-image: 
+        linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)),
+        url('https://www.transparenttextures.com/patterns/blueprint.png');
+    background-attachment: fixed;
+    position: relative;
+}
+
+/* EFECTO DE DIBUJOS DE PIEZAS DE CARRO EN EL FONDO */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    /* Imagen de internet con bosquejos de motores/rines */
+    background-image: url('https://www.freepik.es/vector-gratis/plano-coche-plano-ingenieria-vehiculos-estructura-ilustracion-modelo-sedan_13400067.htm#fromView=keyword&page=1&position=0&uuid=d6aa69d8-89a9-4acf-9b02-305e4341f3a5&query=Bosquejo+coche+esquema');
+    background-size: 500px;
+    opacity: 0.1; /* Sutil */
+    filter: invert(80%) sepia(100%) saturate(500%) hue-rotate(120deg); /* Lo vuelve AGUAMARINA */
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* BARRA SUPERIOR NARANJA DELGADA */
+.barra-naranja {
+    background-color: var(--color-naranja);
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo { color: white; font-weight: bold; font-size: 0.9rem; }
+.logo span { color: var(--color-negro); }
+
+.menu-derecha a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.75rem;
+    font-weight: bold;
+    border: 1px solid white;
+    padding: 2px 10px;
+    border-radius: 3px;
+}
+
+/* BANNER PRINCIPAL */
+.hero {
+    height: 60vh;
+    margin-top: 40px;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), 
+                url('images/view-3d-car-with-sketch-effect.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    border-bottom: 5px solid var(--color-aguamarina);
+}
+
+.hero h1 { font-size: 2.5rem; text-shadow: 2px 2px 5px rgba(0,0,0,0.5); }
+
+.boton-aguamarina {
+    display: inline-block;
+    margin-top: 20px;
+    background-color: var(--color-aguamarina);
+    color: var(--color-negro);
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* SECCIÓN DE CARROS */
+.seccion-inventario { padding: 60px 5%; }
+.titulo { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+.titulo span { color: var(--color-naranja); }
+
+.grilla-carros {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.tarjeta-carro {
+    background: white;
+    width: 320px;
+    border: 2px solid var(--color-aguamarina);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.tarjeta-carro img { width: 100%; height: 200px; object-fit: cover; }
+.detalle-carro { padding: 20px; text-align: center; }
+
+.precio { color: var(--color-naranja); font-size: 1.4rem; font-weight: bold; margin: 10px 0; }
+
+.btn-interes {
+    display: block;
+    background: var(--color-negro);
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* BOTÓN WHATSAPP FIJO */
+.boton-whatsapp-fijo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+```css /* ESTILOS SECCIÓN FORMULARIO DE CRÉDITO */ .seccion-credito-formulario { padding: 80px 5%; display: flex; justify-content: center; background: transparent; /* Permite ver los bosquejos de fondo */ } .tarjeta-accion-credito { background: linear-gradient(135deg, #1a1a1a, #000000); width: 100%; max-width: 1000px; padding: 50px; border-radius: 20px; border: 4px solid var(--color-aguamarina); display: flex; align-items: center; justify-content: space-between; gap: 40px; box-shadow: 0 20px 40px rgba(0, 251, 222, 0.2); } .texto-credito h2 { color: var(--color-aguamarina); font-size: 2rem; margin-bottom: 15px; text-transform: uppercase; font-weight: 900; } .texto-credito p { color: #ffffff; font-size: 1.1rem; line-height: 1.5; } .boton-credito-contenedor { flex-shrink: 0; } .btn-formulario-google { background-color: var(--color-naranja); color: #ffffff; padding: 22px 45px; text-decoration: none; font-weight: 900; font-size: 1.1rem; border-radius: 12px; display: flex; align-items: center; gap: 15px; transition: all 0.4s ease; box-shadow: 0 8px 20px rgba(255, 140, 0, 0.4); } .btn-formulario-google i { font-size: 1.4rem; } .btn-formulario-google:hover { transform: translateY(-5px) scale(1.03); background-color: var(--color-aguamarina); color: #000000; box-shadow: 0 10px 25px rgba(0, 251, 222, 0.5); } /* Ajustes para que se vea bien en celulares */ @media (max-width: 900px) { .tarjeta-accion-credito { flex-direction: column; text-align: center; padding: 40px 20px; } .texto-credito h2 { font-size: 1.6rem; } .btn-formulario-google { width: 100%; justify-content: center; } } ``` ###
+/* ESTILOS DE TARJETAS GIRATORIAS (FLIP CARDS) */
+.seccion-presentacion {
+    padding: 80px 5%;
+    perspective: 1000px; /* Necesario para el efecto 3D */
+}
+
+.contenedor-tarjetas-bio {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tarjeta-flip {
+    background-color: transparent;
+    width: 320px;
+    height: 380px;
+    perspective: 1000px;
+}
+
+.tarjeta-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+/* El giro ocurre aquí */
+.tarjeta-flip:hover .tarjeta-inner {
+    transform: rotateY(180deg);
+}
+
+.tarjeta-front, .tarjeta-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Oculta el lado de atrás mientras gira */
+    backface-visibility: hidden;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+/* LADO FRONTAL (Texto) */
+.tarjeta-front {
+    background: white;
+    border-top: 5px solid var(--color-naranja);
+    border-bottom: 5px solid var(--color-aguamarina);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.tarjeta-front i { font-size: 3.5rem; color: var(--color-naranja); margin-bottom: 20px; }
+.tarjeta-front h3 { color: var(--color-negro); margin-bottom: 15px; font-weight: 900; }
+.tarjeta-front p { color: #555; font-size: 1rem; }
+
+/* LADO POSTERIOR (Foto) */
+.tarjeta-back {
+    background: var(--color-negro);
+    color: white;
+    transform: rotateY(180deg);
+    border: 3px solid var(--color-aguamarina);
+}
+
+.tarjeta-back img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid var(--color-naranja);
+    margin-bottom: 20px;
+}
+
+.tarjeta-back p {
+    font-style: italic;
+    font-size: 1.1rem;
+    color: var(--color-aguamarina);
+}
